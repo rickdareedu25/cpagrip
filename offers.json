@@ -1,0 +1,18 @@
+[
+  {
+    "title": "50% Off Summer Sale",
+    "link": "https://example.com/summer-sale"
+  },
+  {
+    "title": "Buy 1 Get 1 Free",
+    "link": "https://example.com/bogo-offer"
+  },
+  {
+    "title": "Free Shipping on Orders Over $50",
+    "link": "https://example.com/free-shipping"
+  },
+  {
+    "title": "Exclusive VIP Access",
+    "link": "https://example.com/vip-access"
+  }
+]
