@@ -64,7 +64,7 @@
   <script>
     async function loadOffers() {
       try {
-        const response = await fetch("https://www.cpagrip.com/common/offer_feed_json.php?user_id=2455756&key=4ad6f96dca6e0368dcf8cf8f4b67724e&tracking_id=&country=us");
+        const response = await fetch("https://www.cpagrip.com/common/offer_feed_json.php?user_id=2455756&key=4ad6f96dca6e0368dcf8cf8f4b67724e&tracking_id=&country=us&domain=singingfiles.com");
         const data = await response.json();
 
         const container = document.getElementById("offers-container");
