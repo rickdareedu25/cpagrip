@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://singingfiles.com/likepro",
+      "permanent": true
+    }
+  ]
+}
