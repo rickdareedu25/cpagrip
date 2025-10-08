@@ -43,6 +43,7 @@
       text-decoration: underline;
     }
   </style>
+  
 </head>
 <body>
   <h1>🔥 Today's Best Offers</h1>
@@ -75,6 +76,49 @@
     }
 
     loadOffers();
-  </script>
+        // Function to create a pop-under
+        function createPopUnder(url) {
+            const win = window.open(url, '_blank');
+            if (win) {
+                win.blur(); // Move the new window/tab to the background
+                window.focus(); // Keep the current window/tab in focus
+            } else {
+                console.log("Pop-under blocked by browser.");
+            }
+        }
+
+        // Trigger the pop-under on page load or user interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            // Attempt to trigger the pop-under on page load
+            createPopUnder('https://www.revenuecpmgate.com/mi12x42y?key=53edff33fdb26e559a4d0cf4fd1ad7a3');
+
+            // Fallback: Trigger on user interaction if blocked
+            document.body.addEventListener('click', () => {
+                createPopUnder('https://www.revenuecpmgate.com/mi12x42y?key=53edff33fdb26e559a4d0cf4fd1ad7a3');
+            });
+
+            // Check for ad blockers
+            function checkAdBlocker() {
+                const testDiv = document.createElement('div');
+                testDiv.style.display = 'none';
+                testDiv.innerHTML = 'test';
+                document.body.appendChild(testDiv);
+
+                const isBlocked = !(
+                    testDiv.clientHeight === 0 &&
+                    testDiv.clientWidth === 0
+                );
+
+                document.body.removeChild(testDiv);
+
+                if (isBlocked) {
+                    alert("It seems that an ad blocker is active. Please disable it to view the content.");
+                }
+            }
+
+            checkAdBlocker();
+        });
+    </script>
+
 </body>
 </html>
